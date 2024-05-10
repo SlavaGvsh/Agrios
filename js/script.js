@@ -67,3 +67,32 @@ $(".owl-carousel").owlCarousel({
   autoplay: true,
   slideSpeed: 2000,
 });
+
+$(".reviews-carousel").owlCarousel({
+  items: 1,
+  // margin: 10,
+  autoHeight: true,
+  dots: false,
+  nav: true,
+  navText: false,
+  autoplaySpeed: 1000,
+  autoplay: true,
+  slideSpeed: 2000,
+});
+
+$(document).ready(function () {
+  $(".star").on("click", function () {
+    var rating = parseInt($(this).attr("data-rating"));
+
+    // Очищаем все звезды
+    $(".star").removeClass("active");
+
+    // Отмечаем выбранное количество звезд
+    for (var i = 1; i <= rating; i++) {
+      $('.star[data-rating="' + i + '"]').addClass("active");
+    }
+
+    // // Здесь можно отправить данные оценки на сервер или выполнить другие действия
+    // console.log('Оценка: ' + rating);
+  });
+});

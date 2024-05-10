@@ -630,8 +630,7 @@ body.checked {
   width: 11.5rem !important;
   height: 5.3rem;
 }
-
-.owl-nav {
+.promo .owl-nav {
   position: absolute;
   width: 100rem;
   top: 50%;
@@ -643,32 +642,30 @@ body.checked {
   align-items: flex-end;
 }
 @media (max-width: 1000px) {
-  .owl-nav {
+  .promo .owl-nav {
     width: 75rem;
   }
 }
 @media (max-width: 900px) {
-  .owl-nav {
+  .promo .owl-nav {
     width: 50rem;
   }
 }
-
-.owl-prev,
-.owl-next {
+.promo .owl-prev,
+.promo .owl-next {
   width: 6.6rem;
   height: 6.6rem;
   border-radius: 50%;
   border: 0.3rem solid #fff !important;
 }
 @media (max-width: 900px) {
-  .owl-prev,
-  .owl-next {
+  .promo .owl-prev,
+  .promo .owl-next {
     width: 3.6rem;
     height: 3.6rem;
   }
 }
-
-.disabled {
+.promo .disabled {
   opacity: 0.5;
 }
 
@@ -773,6 +770,9 @@ body.checked {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+}
+.about-body__item .icon-check {
+  color: #c5ce38;
 }
 
 .offer {
@@ -904,4 +904,246 @@ body.checked {
   font-size: 3rem;
   line-height: 1.2;
   color: #fff;
+}
+
+.reviews {
+  background-color: #F8F7F0;
+}
+.reviews__container {
+  display: flex;
+  padding: 13rem 1.5rem 12.7rem;
+  gap: 6rem;
+}
+.reviews__main {
+  flex: 0 0 33rem;
+}
+.reviews__subtitle {
+  text-align: left;
+}
+.reviews__title {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+.reviews__text {
+  margin-bottom: 4.3rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.reviews .btn {
+  padding: 1.5rem 5rem;
+}
+.reviews__item {
+  display: flex;
+  gap: 4.5rem;
+}
+.reviews__body {
+  flex: 1;
+  padding: 3.8rem 5rem;
+  border-radius: 1rem;
+  background-color: #fff;
+  height: 100%;
+}
+.reviews__body .owl-nav {
+  display: flex;
+  gap: 1rem;
+}
+.reviews__body .owl-nav .owl-prev,
+.reviews__body .owl-nav .owl-next {
+  width: 6.6rem;
+  height: 6.6rem;
+  border-radius: 50%;
+  border: 0.1rem solid #878680 !important;
+}
+.reviews__body .owl-nav .disabled {
+  opacity: 0.5;
+}
+.reviews__body .reviews-carousel {
+  max-width: 71rem;
+}
+.reviews__body .owl-stage-outer {
+  margin-bottom: 2rem;
+}
+.reviews .star {
+  display: inline-block;
+  font-size: 2rem;
+  color: #878680;
+  cursor: pointer;
+}
+.reviews .star.active,
+.reviews .star:hover {
+  color: rgb(234, 201, 16);
+}
+.reviews__carousel-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2.3rem;
+  max-width: 52rem;
+}
+.reviews__carousel-img {
+  width: 12.6rem;
+  height: 12.6rem;
+  border: 0.5rem solid #fff;
+  border-radius: 50%;
+  background-color: #f8f7f0;
+  outline: 0.3rem dashed rgb(250, 215, 14);
+  margin-top: 1rem;
+  position: relative;
+}
+.reviews__carousel-img::before {
+  content: "";
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  bottom: -30px;
+  left: 34px;
+  background: #4baf47;
+}
+
+.carousel-body__info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.carousel-body__name {
+  font-size: 2.4rem;
+  line-height: 1.2;
+  font-weight: 800;
+  color: #1F1E17;
+}
+
+.benefits__container {
+  display: flex;
+  padding: 12rem 1.5rem 11.3rem;
+}
+.benefits__img {
+  flex: 0 0 70rem;
+  position: relative;
+}
+.benefits__img img {
+  height: 100%;
+}
+.benefits__slogan {
+  width: 30rem;
+  height: 17rem;
+  border-radius: 1rem 1rem 0 1rem;
+  background-color: #eec044;
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+  padding: 5rem;
+  position: absolute;
+  top: 14rem;
+  left: 31rem;
+}
+.benefits__slogan::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  right: 0;
+  bottom: -4.8rem;
+  border-top: 5rem solid #eec044;
+  border-left: 5rem solid transparent;
+}
+.benefits__slogan span {
+  font-family: "Covered By Your Grace", cursive;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 1.5;
+  color: #EEC044;
+  text-align: center;
+  display: block;
+  color: #fff;
+}
+.benefits__body {
+  flex: 1;
+  padding: 0 1.5rem;
+}
+.benefits__subtitle {
+  text-align: left;
+}
+.benefits__title {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+.benefits__list {
+  margin-bottom: 3rem;
+}
+.benefits .btn {
+  padding: 1.5rem 5rem;
+}
+
+.benefits__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+}
+.benefits__item .item__title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  line-height: 1.2;
+  display: block;
+  color: #1F1E17;
+  margin-bottom: 0.5rem;
+}
+.benefits__item .icon-check {
+  font-size: 4rem;
+}
+.benefits__item .check-color1 {
+  color: #4baf47;
+}
+.benefits__item .check-color2 {
+  color: #c5ce38;
+}
+.benefits__item .check-color3 {
+  color: #eec044;
+}
+
+.news__container {
+  padding-bottom: 12rem;
+}
+.news__title {
+  margin-bottom: 5rem;
+}
+.news__items {
+  display: flex;
+  gap: 3rem;
+}
+.news__item {
+  flex: 1;
+  height: 51rem;
+  border-radius: 1rem;
+  box-shadow: 0rem 0.4rem 3.4rem rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: flex-end;
+}
+.news__body {
+  height: 21.5rem;
+  background-color: #fff;
+  padding: 0 4.6rem 4.1rem;
+  width: 100%;
+  text-align: center;
+}
+.news__body .btn {
+  margin: -4.8rem 0 1.5rem 0;
+}
+.news__body .icon-news {
+  color: #eec044;
+  margin-left: 1rem;
+}
+.news__comments {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.news__text {
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1.2;
+  color: #1F1E17;
 }/*# sourceMappingURL=style.css.map */
