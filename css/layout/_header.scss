@@ -30,34 +30,7 @@
       align-items: center;
       gap: 1.5rem;
    }
-   .social {
-      @include respond(tab-port) {
-         display: none;
-      }
-      &__list {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         gap: 1rem;
-      }
-      &__link {
-         width: 4rem;
-         display: block;
-         text-align: center;
-         width: 4rem;
-         border-radius: 50%;
-         background: $color-bg-social;
-         overflow: hidden;
-         border: 0.1rem solid $color-gray;
-         i {
-            font-size: 1.5rem;
-            color: $color-black;
-         }
-         &:hover {
-            opacity: 0.5;
-         }
-      }
-   }
+  
    .contact {
       display: flex;
       justify-content: space-between;
@@ -75,6 +48,7 @@
          }
          i {
             font-size: 4rem;
+            color: $color-green;
             @include respond(tab-land) {
                font-size: 3rem;
             }
@@ -132,6 +106,34 @@
       font-size: 2rem;
       @include respond(tab-port) {
          padding: 1rem;
+      }
+   }
+}
+.social {
+   @include respond(tab-port) {
+      display: none;
+   }
+   &__list {
+      display: flex;
+      // justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+   }
+   &__link {
+      width: 4rem;
+      display: block;
+      text-align: center;
+      width: 4rem;
+      border-radius: 50%;
+      background: $color-bg-social;
+      overflow: hidden;
+      border: 0.1rem solid $color-gray;
+      i {
+         font-size: 1.5rem;
+         color: $color-black;
+      }
+      &:hover {
+         opacity: 0.5;
       }
    }
 }
