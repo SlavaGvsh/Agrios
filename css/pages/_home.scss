@@ -39,6 +39,9 @@
          content: "";
          position: absolute;
          background: url("../../img/img-main/img-decor-title.png");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
          width: 9.6rem;
          height: 7.5rem;
          top: 7.4rem;
@@ -46,6 +49,9 @@
          @include respond(tab-port) {
             top: -2.6rem;
             right: 2.7rem;
+         }
+         @include respond(phone-small) {
+            right: -5.3rem;
          }
       }
    }
@@ -61,7 +67,10 @@
       width: 11.5rem !important;
       height: 5.3rem;
    }
-   .owl-carousel__item{
+   .owl-carousel {
+      z-index: 0;
+   }
+   .owl-carousel__item {
       padding: 2rem 0;
    }
    .owl-nav {
@@ -107,6 +116,10 @@
       gap: 3rem;
       margin-top: -65px;
       margin-bottom: 10.6rem;
+      align-items: center;
+      @include respond(phone-small) {
+         flex-direction: column;
+      }
    }
    &__item {
       display: flex;
@@ -117,11 +130,19 @@
       box-shadow: $box-shadow;
       border-radius: 2rem;
       background: $color-white;
+      min-height: 100%;
+      @include respond(tab-port) {
+         padding: 2.8rem 4.1rem 1.3rem;
+      }
+      @include respond(phone-small) {
+         width: 50%;
+      }
    }
    &__subtitle {
       margin-bottom: 3rem;
    }
    &__text {
+      flex: 1 1 auto;
       font-size: 2.4rem;
       font-weight: 800;
       color: $color-black;
@@ -140,6 +161,10 @@
       justify-content: space-between;
       // align-items: center;
       gap: 3.5rem;
+      @include respond(phone) {
+         flex-direction: column;
+         align-items: center;
+      }
    }
    &__img {
       flex: 1;
@@ -148,6 +173,9 @@
    &__img-big {
       width: 55rem;
       border-radius: 50%;
+      @include respond(phone-small) {
+         width: 40rem;
+      }
    }
    &__img-small {
       position: absolute;
@@ -157,17 +185,33 @@
       height: 25rem;
       border-radius: 50%;
       outline: 1rem solid $color-white;
+      @include respond(phone-small) {
+         bottom: -2.3rem;
+         left: -3rem;
+         width: 15rem;
+         height: 16rem;
+      }
    }
    &__content {
       flex: 1;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      @include respond(phone) {
+         align-items: center;
+         padding: 10px 80px;
+      }
+      @include respond(phone-small) {
+         padding: 10px;
+      }
    }
 
    &__title {
       margin-bottom: 3.4rem;
       text-align: left;
+      @include respond(phone) {
+         text-align: center;
+      }
    }
 
    &__label {
@@ -220,6 +264,10 @@
    &__items {
       display: flex;
       gap: 3rem;
+      align-items: center;
+      @include respond(phone) {
+         flex-direction: column;
+      }
    }
    &__item {
       flex: 1;
@@ -229,6 +277,18 @@
       border-radius: 1rem;
       height: 60rem;
       position: relative;
+      @include respond(tab-port) {
+         height: 40rem;
+      }
+      @include respond(phone) {
+         height: 50rem;
+
+         flex: auto;
+         width: 40%;
+      }
+      @include respond(phone-small) {
+         width: 50%;
+      }
    }
    &__body {
       background-color: $color-white;
@@ -244,9 +304,15 @@
    &__img {
       border-radius: 1rem;
       position: absolute;
-      top: -5rem;
+      top: -6rem;
       right: 50%;
       transform: translatex(50%);
+      @include respond(tab-port) {
+         top: -8rem;
+      }
+      @include respond(tab-port) {
+         top: -10rem;
+      }
    }
 }
 // section video
@@ -263,7 +329,9 @@
    }
    &__list {
       @include flex;
-      gap: 10rem;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
    }
    &__link {
       padding: 2rem;
@@ -279,6 +347,7 @@
    &__body {
       @include flex;
       gap: 10rem;
+      flex-direction: column;
    }
    &__title {
       font-size: 7rem;
@@ -286,6 +355,10 @@
       color: $color-white;
       line-height: 1.2;
       max-width: 49rem;
+      @include respond(phone) {
+         font-size: 5rem;
+         text-align: center;
+      }
    }
    &__icon {
       width: 10rem;
@@ -294,6 +367,9 @@
       background-color: $color-white;
       position: relative;
       margin-right: 6.5rem;
+      @include respond(phone) {
+         margin: 0;
+      }
       span {
          position: absolute;
          top: 50%;
@@ -318,7 +394,11 @@
    }
    &__body {
       display: flex;
+      align-items: center;
       gap: 1rem;
+      @include respond(phone) {
+         flex-direction: column;
+      }
    }
    &__item {
       flex: 1;
@@ -326,17 +406,24 @@
       background-size: cover;
       background-position: center;
       border-radius: 1rem;
-      height: 55rem;
+      min-height: 55rem;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
       align-items: center;
       padding: 4rem;
+      @include respond(phone) {
+         width: 40%;
+      }
+      @include respond(phone-small) {
+         width: 50%;
+      }
    }
    &__text {
       font-size: 3rem;
       line-height: 1.2;
       color: $color-white;
+      text-align: center;
    }
 }
 // section reviews
@@ -346,16 +433,34 @@
       display: flex;
       padding: 13rem 1.5rem 12.7rem;
       gap: 6rem;
+      align-items: center;
+      @include respond(tab-port-1) {
+         gap: 1rem;
+      }
+      @include respond(phone) {
+         flex-direction: column;
+         gap: 3rem;
+
+      }
    }
    &__main {
       flex: 0 0 33rem;
+      @include respond(phone) {
+         text-align: center;
+      }
    }
    &__subtitle {
       text-align: left;
+      @include respond(phone) {
+         text-align: center;
+      }
    }
    &__title {
       text-align: left;
       margin-bottom: 3rem;
+      @include respond(phone) {
+         text-align: center;
+      }
    }
    &__text {
       margin-bottom: 4.3rem;
@@ -368,16 +473,27 @@
    &__item {
       display: flex;
       gap: 4.5rem;
+      @include respond(phone) {
+         flex-direction: column;
+         align-items: center;
+         padding: 6rem 0;
+      }
    }
    &__body {
       flex: 1;
-      padding: 3.8rem 5rem;
+      padding: 3.8rem 3rem;
       border-radius: 1rem;
       background-color: $color-white;
       height: 100%;
+      @include respond(tab-port-1) {
+         padding: 3.8rem 1rem;
+      }
       .owl-nav {
          display: flex;
          gap: 1rem;
+         @include respond(phone) {
+            justify-content: center;
+         }
          .owl-prev,
          .owl-next {
             width: 6.6rem;
@@ -430,6 +546,10 @@
          bottom: -30px;
          left: 34px;
          background: #4baf47;
+         @include respond(phone) {
+            bottom: -19px;
+            left: 21px;
+         }
       }
    }
 }
@@ -451,11 +571,19 @@
    &__container {
       display: flex;
       padding: 12rem 1.5rem 11.3rem;
+      @include respond(phone) {
+         flex-direction: column;
+         align-items: center;
+         gap: 2rem;
+      }
    }
    &__img {
       flex: 0 0 70rem;
       position: relative;
       // height: 100%;
+      @include respond(tab-port-1) {
+         flex: 0 0 50rem;
+      }
       img {
          height: 100%;
       }
@@ -472,6 +600,11 @@
       position: absolute;
       top: 14rem;
       left: 31rem;
+      @include respond(tab-port-1) {
+         width: 21rem;
+         height: 16rem;
+         left: 23rem;
+      }
       &::before {
          content: "";
          position: absolute;
@@ -490,16 +623,28 @@
    &__body {
       flex: 1;
       padding: 0 1.5rem;
+      @include respond(phone) {
+         text-align: center;
+      }
    }
    &__subtitle {
       text-align: left;
+      @include respond(phone) {
+         text-align: center;
+      }
    }
    &__title {
       text-align: left;
       margin-bottom: 3rem;
+      @include respond(phone) {
+         text-align: center;
+      }
    }
    &__list {
       margin-bottom: 3rem;
+      @include respond(phone) {
+         text-align: left;
+      }
    }
    .btn {
       padding: 1.5rem 5rem;
@@ -543,6 +688,10 @@
    &__items {
       display: flex;
       gap: 3rem;
+      @include respond(phone) {
+         flex-direction: column;
+         align-items: center;
+      }
    }
    &__item {
       flex: 1;
@@ -555,17 +704,29 @@
       background-repeat: no-repeat;
       display: flex;
       align-items: flex-end;
+      overflow: hidden;
+      @include respond(phone) {
+         flex: auto;
+         width: 45%;
+      }
+      @include respond(phone-small) {
+        
+         width: 80%;
+      }
    }
    &__body {
       height: 21.5rem;
       background-color: $color-white;
-      padding: 0 4.6rem 4.1rem;
+      padding: 0 3.6rem 4.1rem;
       width: 100%;
       text-align: center;
+      @include respond(tab-port) {
+         padding: 0 2.6rem 2.1rem;
+      }
       .btn {
          margin: -4.8rem 0 1.5rem 0;
       }
-      
+
       .icon-news {
          color: #eec044;
          margin-left: 1rem;
@@ -575,10 +736,11 @@
       display: flex;
       gap: 1rem;
       align-items: center;
+      justify-content: center;
    }
-   &__text{
+   &__text {
       font-size: 2.6rem;
-      font-weight: 800 ;
+      font-weight: 800;
       line-height: 1.2;
       color: $color-black;
    }

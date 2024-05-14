@@ -29,10 +29,11 @@
       justify-content: space-between;
       align-items: center;
       gap: 4.5rem;
+      z-index: 50;
 
       @include respond(tab-port) {
          flex-direction: column;
-         background: #f3ecec2f;
+         background: rgb(41 40 37);
          border-radius: 2rem;
          width: 20rem;
       }

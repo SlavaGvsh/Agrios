@@ -4,28 +4,28 @@
 //        $('body').toggleClass('lock');
 
 //     });
-//     //  tabs
-//   $(".contact__item > a").click(function (e) {
-//    e.preventDefault();
+    //  tabs
+  $(".contact__item > a").click(function (e) {
+   e.preventDefault();
 
-//    var currentAttrValue = $(this).attr("href");
+   var currentAttrValue = $(this).attr("href");
 
-//    console.log(currentAttrValue);
+   console.log(currentAttrValue);
 
 //    // Показываем содержимое вкладки
-//    $(".contact__body").removeClass("active");
-//    $(currentAttrValue).addClass("active");
+   $(".contact__body").removeClass("active");
+   $(currentAttrValue).addClass("active");
 
-//    // Делаем текущую вкладку активной
-//    $(".contact__item > a").removeClass("active");
-//    $(this).addClass("active");
-//  });
+   // Делаем текущую вкладку активной
+   $(".contact__item > a").removeClass("active");
+   $(this).addClass("active");
+ });
 // });
 
 $(document).ready(function () {
   $(".burger-menu, .burger-menu-close").click(function (event) {
     $(".nav,.burger-menu-close, .burger-menu").toggleClass("active");
-    //  $('body').toggleClass('lock');
+     $('body').toggleClass('lock');
   });
   showDrop();
 
@@ -33,18 +33,18 @@ $(document).ready(function () {
     showDrop();
   });
 
-  //   $(document).click(function (event) {
-  //     if (!$(event.target).closest(".nav__list").length) {
-  //       // Если клик произошел не внутри .nav__menu, скрываем все открытые дропдауны
-  //       $("a.drop-btn").removeClass("active");
-  //     }
-  //   });
+    $(document).click(function (event) {
+      if (!$(event.target).closest(".nav__list").length) {
+        // Если клик произошел не внутри .nav__menu, скрываем все открытые дропдауны
+        $(".nav__item").removeClass("active");
+      }
+    });
 });
 
 function showDrop() {
   var screenWidth = $(window).width();
   console.log(screenWidth);
-  if (screenWidth < 768) {
+  if (screenWidth < 900) {
     $(".nav__link").click(function (event) {
       $(".nav__item").not($(this).parent()).removeClass("active");
       $(this).parent(".nav__item").toggleClass("active");
