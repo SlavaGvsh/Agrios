@@ -97,17 +97,7 @@ $(document).ready(function () {
   });
 });
 
-// reviews
-// $(document).ready(function(){
-//   $('#show-more').on('click', function(){
-//       $('.reviews__item.hidden').slice(0, 6).removeClass('hidden');
-      
-//       // Если больше нет скрытых отзывов, скрыть кнопку
-//       if ($('.reviews__item.hidden').length === 0) {
-//           $('#show-more').hide();
-//       }
-//   });
-// });
+
 $(document).ready(function(){
   $('#show-more').on('click', function(event){
       event.preventDefault(); // Предотвращаем стандартное поведение кнопки
@@ -119,3 +109,4 @@ $(document).ready(function(){
       }
   });
 });
+

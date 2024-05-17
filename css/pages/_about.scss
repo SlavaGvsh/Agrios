@@ -1,0 +1,71 @@
+.breadcrumbs {
+   background-image: url("../../img/page-about/bg-breadcrumb.jpeg");
+   background-size: cover;
+   background-position: center;
+   &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 12rem 0;
+   }
+   &__list {
+      display: flex;
+   }
+   &__item:not(:last-child) {
+      position: relative;
+      // display: block;
+      &::before {
+         content: "/";
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 100%;
+         color: $color-white;
+      }
+   }
+   &__link {
+      color: $color-white;
+      font-size: 1.4rem;
+      font-weight: 600;
+      line-height: 1.2;
+      text-transform: uppercase;
+      padding: 1rem 2rem;
+   }
+   &__link-big {
+      font-size: 5rem;
+      font-weight: 800;
+      padding: 0;
+      text-transform: capitalize;
+      line-height: 1;
+   }
+}
+
+// section-market
+.market {
+   &__container {
+      @include flex;
+   }
+   &__img {
+      position: relative;
+      width: 45rem;
+      height: 60rem;
+      .img-big {
+         position: absolute;
+         width: 100%;
+         height: 100%;
+         top: 0;
+         left: 0;
+         object-fit: cover;
+      }
+      .img-small {
+         position: absolute;
+         width: 29rem;
+         height: 35.1rem;
+         top: 0;
+         left: 0;
+         object-fit: cover;
+      }
+   }
+}
