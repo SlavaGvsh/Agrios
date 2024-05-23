@@ -1925,4 +1925,56 @@ body.lock {
 
 .offer__body {
   margin: 11rem 0 0 0;
+}
+
+.services-slider {
+  background-color: #F8F7F0;
+}
+.services-slider__container {
+  position: relative;
+}
+.services-slider__container::before {
+  content: url(../../img/pade-services/services-slider/decor-left.png);
+  width: 54rem;
+  height: 12rem;
+  position: absolute;
+  top: 0;
+  left: -30rem;
+}
+.services-slider__container::after {
+  content: url(../../img/pade-services/services-slider/decor-right.png);
+  width: 54rem;
+  height: 12rem;
+  position: absolute;
+  bottom: 12rem;
+  right: -32rem;
+}
+.services-slider .slider__items {
+  padding: 8rem 0;
+}
+.services-slider .slider__item {
+  flex: 0 0 19rem;
+  width: 19rem;
+  height: 7.5rem;
+}
+
+.services__video {
+  padding: 12rem 0 19rem;
+}
+.services__video .video__body {
+  position: relative;
+}
+.services__video .video__body::after {
+  content: "Watch our video";
+  position: absolute;
+  bottom: 6rem;
+  right: 17rem;
+  font-family: "Covered By Your Grace", cursive;
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 1.5;
+  color: #EEC044;
+  text-align: center;
+  display: block;
+  font-size: 3rem;
 }/*# sourceMappingURL=style.css.map */

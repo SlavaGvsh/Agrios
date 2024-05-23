@@ -10,6 +10,57 @@
       // }
    }
 }
-.offer__body{
+.offer__body {
    margin: 11rem 0 0 0;
+}
+// services-slider
+.services-slider {
+   background-color: $color-bg-social;
+   &__container {
+      position: relative;
+      &::before {
+         content: url(../../img/pade-services/services-slider/decor-left.png);
+         width: 54rem;
+         height: 12rem;
+         position: absolute;
+         top: 0;
+         left: -30rem;
+      }
+      &::after {
+         content: url(../../img/pade-services/services-slider/decor-right.png);
+         width: 54rem;
+         height: 12rem;
+         position: absolute;
+         bottom: 12rem;
+         right: -32rem;
+      }
+   }
+   .slider {
+      &__items {
+         padding: 8rem 0;
+      }
+      &__item {
+         flex: 0 0 19rem;
+         width: 19rem;
+         height: 7.5rem;
+      }
+   }
+}
+// services__video
+.services__video{
+   padding: 12rem 0 19rem;
+   
+   .video__body{
+      position: relative;
+      &::after{
+         content: 'Watch our video';
+         position: absolute;
+         bottom: 6rem;
+         right: 17rem;
+         @include font-covered;
+         font-size: 3rem;
+
+
+      }
+   }
 }

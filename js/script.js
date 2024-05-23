@@ -4,28 +4,28 @@
 //        $('body').toggleClass('lock');
 
 //     });
-    //  tabs
-  $(".contact__item > a").click(function (e) {
-   e.preventDefault();
+//  tabs
+$(".contact__item > a").click(function (e) {
+  e.preventDefault();
 
-   var currentAttrValue = $(this).attr("href");
+  var currentAttrValue = $(this).attr("href");
 
-   console.log(currentAttrValue);
+  console.log(currentAttrValue);
 
-//    // Показываем содержимое вкладки
-   $(".contact__body").removeClass("active");
-   $(currentAttrValue).addClass("active");
+  //    // Показываем содержимое вкладки
+  $(".contact__body").removeClass("active");
+  $(currentAttrValue).addClass("active");
 
-   // Делаем текущую вкладку активной
-   $(".contact__item > a").removeClass("active");
-   $(this).addClass("active");
- });
+  // Делаем текущую вкладку активной
+  $(".contact__item > a").removeClass("active");
+  $(this).addClass("active");
+});
 // });
 
 $(document).ready(function () {
   $(".burger-menu, .burger-menu-close").click(function (event) {
     $(".nav,.burger-menu-close, .burger-menu").toggleClass("active");
-     $('body').toggleClass('lock');
+    $("body").toggleClass("lock");
   });
   showDrop();
 
@@ -33,12 +33,12 @@ $(document).ready(function () {
     showDrop();
   });
 
-    $(document).click(function (event) {
-      if (!$(event.target).closest(".nav__list").length) {
-        // Если клик произошел не внутри .nav__menu, скрываем все открытые дропдауны
-        $(".nav__item").removeClass("active");
-      }
-    });
+  $(document).click(function (event) {
+    if (!$(event.target).closest(".nav__list").length) {
+      // Если клик произошел не внутри .nav__menu, скрываем все открытые дропдауны
+      $(".nav__item").removeClass("active");
+    }
+  });
 });
 
 function showDrop() {
@@ -80,6 +80,18 @@ $(".reviews-carousel").owlCarousel({
   slideSpeed: 2000,
 });
 
+$(".services-carousel").owlCarousel({
+  items: 1,
+  // margin: 10,
+  autoHeight: true,
+  dots: false,
+  nav: false,
+  navText: false,
+  autoplaySpeed: 1000,
+  autoplay: true,
+  slideSpeed: 2000,
+});
+
 $(document).ready(function () {
   $(".star").on("click", function () {
     var rating = parseInt($(this).attr("data-rating"));
@@ -97,16 +109,14 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  $("#show-more").on("click", function (event) {
+    event.preventDefault(); // Предотвращаем стандартное поведение кнопки
+    $(".reviews__item.hidden").slice(0, 6).removeClass("hidden");
 
-$(document).ready(function(){
-  $('#show-more').on('click', function(event){
-      event.preventDefault(); // Предотвращаем стандартное поведение кнопки
-      $('.reviews__item.hidden').slice(0, 6).removeClass('hidden');
-      
-      // Если больше нет скрытых отзывов, скрыть кнопку
-      if ($('.reviews__item.hidden').length === 0) {
-          $('#show-more').hide();
-      }
+    // Если больше нет скрытых отзывов, скрыть кнопку
+    if ($(".reviews__item.hidden").length === 0) {
+      $("#show-more").hide();
+    }
   });
 });
-
