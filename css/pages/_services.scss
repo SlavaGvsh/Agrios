@@ -1,0 +1,15 @@
+.offer-services {
+   padding: 12rem 0 19.4rem;
+   background-color: $color-white;
+   .offer {
+      &__item {
+         height: 32rem;
+      }
+      // &.offer__boby{
+      //    margin: 11rem 0 0 0;
+      // }
+   }
+}
+.offer__body{
+   margin: 11rem 0 0 0;
+}
