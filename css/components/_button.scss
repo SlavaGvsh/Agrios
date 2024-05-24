@@ -40,17 +40,16 @@
       animation-fill-mode: backwards;
    }
 }
-// .btn__brown {
-//    &,
-//    &:link,
-//    &:visited {
-//       background: $color-brown-darck;
-//       color: $color-white;
-//       &:hover {
-         
-//          &::after {
-//             background: $color-brown-darck;
-//          }
-//       }
-//    }
-// }
+.btn__yellow {
+   &,
+   &:link,
+   &:visited {
+      background: $color-yellow;
+      color: $color-white;
+      &:hover {
+         &::after {
+            background: $color-gray;
+         }
+      }
+   }
+}

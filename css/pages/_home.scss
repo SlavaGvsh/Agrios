@@ -267,6 +267,7 @@
       align-items: center;
       @include respond(phone) {
          flex-direction: column;
+         gap: 7rem;
       }
    }
    &__item {
@@ -287,7 +288,7 @@
          width: 40%;
       }
       @include respond(phone-small) {
-         width: 50%;
+         width: 65%;
       }
    }
    &__body {
@@ -299,6 +300,7 @@
       right: 50%;
       transform: translate(50%, -50%);
       border-radius: 1rem;
+      box-shadow: $box-shadow;
       // position: relative;
    }
    &__img {
@@ -348,6 +350,9 @@
       @include flex;
       gap: 10rem;
       // flex-direction: column;
+      @include respond(phone){
+         flex-direction: column;
+      }
    }
    &__title {
       font-size: 7rem;
@@ -416,7 +421,7 @@
          width: 40%;
       }
       @include respond(phone-small) {
-         width: 50%;
+         width: 65%;
       }
    }
    &__text {
@@ -440,7 +445,6 @@
       @include respond(phone) {
          flex-direction: column;
          gap: 3rem;
-
       }
    }
    &__main {
@@ -710,7 +714,6 @@
          width: 45%;
       }
       @include respond(phone-small) {
-        
          width: 80%;
       }
    }

@@ -56,7 +56,7 @@ function showDrop() {
   }
 }
 
-$(".owl-carousel").owlCarousel({
+$(".promo-carousel").owlCarousel({
   items: 1,
   // margin: 10,
   autoHeight: true,
@@ -75,21 +75,36 @@ $(".reviews-carousel").owlCarousel({
   dots: false,
   nav: true,
   navText: false,
-  autoplaySpeed: 1000,
+  autoplaySpeed: 3000,
   autoplay: true,
-  slideSpeed: 2000,
+  slideSpeed: 3000,
+  
 });
 
 $(".services-carousel").owlCarousel({
-  items: 1,
+  items: 5,
   // margin: 10,
   autoHeight: true,
   dots: false,
   nav: false,
   navText: false,
-  autoplaySpeed: 1000,
+  autoplaySpeed: 5000,
   autoplay: true,
-  slideSpeed: 2000,
+  slideSpeed: 4000,
+  loop: true,
+  autoplayTimeout: 3000,
+  autoplayHoverPause: true,
+  responsive: {
+    0: {
+      items: 2,
+    },
+    600: {
+      items: 3,
+    },
+    1000: {
+      items: 5,
+    },
+  },
 });
 
 $(document).ready(function () {
