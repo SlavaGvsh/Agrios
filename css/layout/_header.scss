@@ -1,6 +1,7 @@
 .header {
-   background: url(../../img/Section.png) center/cover no-repeat;
+   background: url(../../img/Section.png) 50% 100% no-repeat;
    position: relative;
+   margin: -1.5rem 0;
    &__container {
       padding: 1rem 1.5rem;
       display: flex;

@@ -78,7 +78,6 @@ $(".reviews-carousel").owlCarousel({
   autoplaySpeed: 3000,
   autoplay: true,
   slideSpeed: 3000,
-  
 });
 
 $(".services-carousel").owlCarousel({
@@ -135,3 +134,4 @@ $(document).ready(function () {
     }
   });
 });
+

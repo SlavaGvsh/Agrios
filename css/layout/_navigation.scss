@@ -20,8 +20,13 @@
       background: rgb(41, 40, 37);
 
       &.active {
-         top: 10.5rem;
+         top: 14.5rem;
          z-index: 1;
+         bottom: 0;
+
+         // @include respond(phone-small) {
+         //    top: 14.5rem;
+         // }
       }
    }
 
@@ -43,6 +48,7 @@
       }
       @include respond(phone) {
          width: 100%;
+         justify-content: flex-start;
       }
    }
    &__item {
@@ -93,6 +99,17 @@
       color: $color-gray;
       padding: 1rem 1.5rem;
       display: block;
+      &.drop-btn {
+         @include respond(tab-port) {
+            display: none;
+         }
+      }
+      &.active {
+         color: $color-black;
+         @include respond(tab-port) {
+            color: #dbd5ad;
+         }
+      }
       @include respond(tab-port) {
          width: 100%;
       }
@@ -109,6 +126,12 @@
       &:active {
          // transform: translateY(-0.2rem);
          box-shadow: (0rem 0.4rem 0.4rem rgba(0, 0, 0, 0.1));
+      }
+   }
+   .mobile-drop {
+      display: none;
+      @include respond(tab-port) {
+         display: block;
       }
    }
 }

@@ -350,7 +350,7 @@
       @include flex;
       gap: 10rem;
       // flex-direction: column;
-      @include respond(phone){
+      @include respond(phone) {
          flex-direction: column;
       }
    }
@@ -511,6 +511,9 @@
       }
       .reviews-carousel {
          max-width: 71rem;
+         @include respond(phone-small) {
+            max-width: 49rem;
+         }
       }
       .owl-stage-outer {
          margin-bottom: 2rem;

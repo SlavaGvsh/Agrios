@@ -4,11 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
     <link rel="manifest" href="favicon/site.webmanifest" />
-    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5" />
+    <link
+      rel="mask-icon"
+      href="favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
     <meta name="msapplication-TileColor" content="#da532c" />
     <meta name="theme-color" content="#ffffff" />
 
@@ -95,7 +113,11 @@
             <nav class="nav">
               <ul class="nav__list">
                 <li class="nav__item">
-                  <a href="index.html" class="nav__link drop-btn">Home</a>
+                  <a href="index.html" class="nav__link drop-btn active"
+                    >Home</a
+                  >
+                  <span class="nav__link drop-btn active mobile-drop">Home</span>
+
                   <ul>
                     <li><a href="#">Hello</a></li>
                     <li><a href="#">Hello</a></li>
@@ -136,16 +158,16 @@
           </div>
         </div>
       </header>
-       <main class="main">
+      <main class="main">
         <section class="promo">
           <div class="owl-carousel promo-carousel">
             <div class="owl-carousel__item">
               <div class="promo__container">
                 <div class="promo__body">
                   <span class="promo__subtitle">Welcome to agrios farming</span>
-                  <h1 class="promo__title">
+                  <strong class="promo__title">
                     Agriculture <span class="color-yellow">&</span> Eco Farming
-                  </h1>
+                  </strong>
                   <p class="promo__text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
                     elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
@@ -166,9 +188,9 @@
               <div class="promo__container">
                 <div class="promo__body">
                   <span class="promo__subtitle">Welcome to agrios farming</span>
-                  <h1 class="promo__title">
+                  <strong class="promo__title">
                     Agriculture <span class="color-yellow">&</span> Eco Farming
-                  </h1>
+                  </strong>
                   <p class="promo__text">
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
                     elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
@@ -185,16 +207,8 @@
                 </div>
               </div>
             </div>
-             <!-- <div class="def-nav">
-              <div class="owl-prev">prev</div>
-              <div class="owl-next">next</div>
-            </div>  -->
-             <!-- <div class="owl-dots">
-                <div class="owl-dot active"><span></span></div>
-                <div class="owl-dot"><span></span></div>
-                <div class="owl-dot"><span></span></div>
-            </div>  -->
-           </div>
+            
+          </div>
         </section>
         <section class="about">
           <div class="about__container">
@@ -244,9 +258,9 @@
                 <span class="about-body__subtitle subtitle"
                   >Our Introductions</span
                 >
-                <h2 class="about-body__title title">
+                <h1 class="about-body__title title">
                   Agriculture & Organic Product Farm
-                </h2>
+                </h1>
                 <span class="about-body__label"
                   >Agrios is the largest global organic farm.
                 </span>
@@ -374,9 +388,9 @@
               </ul>
             </div>
             <div class="video__body">
-              <h3 class="video__title">
+              <strong class="video__title">
                 Agriculture Matters to the Future of Development
-              </h3>
+              </strong>
               <a href="#" class="video__icon"><span></span></a>
             </div>
           </div>
@@ -644,7 +658,7 @@
               </ul>
             </div>
             <div class="footer__colum footer__explore">
-              <h4 class="footer__title">Explore</h4>
+              <h3 class="footer__title">Explore</h3>
               <ul class="explore__list">
                 <li class="explore__item">
                   <i class="icon-leaf"></i>
@@ -673,7 +687,7 @@
               </ul>
             </div>
             <div class="footer__colum footer__news">
-              <h4 class="footer__title">News</h4>
+              <h3 class="footer__title">News</h3>
               <ul class="news-footer__list">
                 <li class="news-footer__item">
                   <p class="news-footer__text">
@@ -690,7 +704,7 @@
               </ul>
             </div>
             <div class="footer__colum footer__contact">
-              <h4 class="footer__title">Contact</h4>
+              <h3 class="footer__title">Contact</h3>
               <div class="contact">
                 <div class="contact__item">
                   <i class="icon-phane"></i>
@@ -730,14 +744,16 @@
               © All Copyright 2024 by shawonetc Themes
             </div>
             <ul class="footer__bottom-list">
-              <li class="footer__bottom-item"><a class="footer__bottom-link" href="#">Terms of Use</a></li>
-              <li class="footer__bottom-item"><a class="footer__bottom-link" href="#">Privacy Policy</a></li>
-            
-              
+              <li class="footer__bottom-item">
+                <a class="footer__bottom-link" href="#">Terms of Use</a>
+              </li>
+              <li class="footer__bottom-item">
+                <a class="footer__bottom-link" href="#">Privacy Policy</a>
+              </li>
             </ul>
           </div>
         </div>
-      </footer> 
+      </footer>
     </div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
