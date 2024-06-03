@@ -274,6 +274,7 @@ body.lock {
   flex: 1;
   display: flex;
   justify-content: space-between;
+  padding-bottom: 1rem;
 }
 .header__logo {
   flex: 0 0 17rem;
@@ -292,7 +293,6 @@ body.lock {
 .header .contact {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 .header .contact__item {
   display: flex;
@@ -2197,9 +2197,20 @@ body.lock {
   gap: 3rem;
   padding: 12rem 1.5rem;
 }
+@media (max-width: 1120px) {
+  .agro-prod__container {
+    grid-template-columns: minmax(270px, 1fr) 3fr;
+    gap: 2rem;
+  }
+}
+@media (max-width: 900px) {
+  .agro-prod__container {
+    grid-template-columns: 1fr; /* Одна колонка */
+    grid-template-areas: "sidebar" "body"; /* Сайдбар под основным контентом */
+  }
+}
 .agro-prod__body {
   grid-area: body;
-  background: #228036;
 }
 
 #sidebar {
@@ -2211,6 +2222,11 @@ body.lock {
   background-color: #F8F7F0;
   border-radius: 1rem;
   padding: 4.6rem 5rem 3.6rem;
+}
+@media (max-width: 1000px) {
+  .sidebar__nav {
+    padding: 2.6rem 3rem 2.6rem;
+  }
 }
 .sidebar__list {
   display: flex;
@@ -2227,7 +2243,7 @@ body.lock {
   font-size: 2rem;
   line-height: 1.2;
   font-weight: 800;
-  color: #1F1E17;
+  color: #1f1e17;
   display: block;
 }
 .sidebar__link {
@@ -2247,6 +2263,11 @@ body.lock {
   align-items: center;
   border-radius: 1rem;
 }
+@media (max-width: 1120px) {
+  .help {
+    padding: 4.1rem 3.8rem 4.6rem;
+  }
+}
 .help__title {
   font-size: 2.4rem;
   line-height: 1.2;
@@ -2258,7 +2279,7 @@ body.lock {
   font-size: 1.6rem;
   line-height: 1.8;
   font-weight: 500;
-  color: #C3F5C1;
+  color: #c3f5c1;
   margin-bottom: 0.7rem;
   text-align: center;
 }
@@ -2273,4 +2294,160 @@ body.lock {
 .help .btn-sidebar {
   text-transform: capitalize;
   font-weight: 700;
+}
+
+.agro-prod__img {
+  border-radius: 1rem;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 1.7rem;
+}
+.agro-prod__img::before {
+  content: "\e912";
+  position: absolute;
+  color: #fff;
+  font-family: "icomoon";
+  font-size: 4rem;
+  font-weight: 300;
+  right: 2rem;
+  bottom: 0;
+  width: 6.2rem;
+  height: 6.2rem;
+  background-color: #c5ce38;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.agro-prod__img img {
+  width: 100%;
+  max-height: 32rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.agro-prod__title {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1.4;
+  color: #1F1E17;
+  margin-bottom: 1.8rem;
+}
+.agro-prod__text {
+  font-weight: 500;
+  margin-bottom: 3.4rem;
+}
+
+.advantages {
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  margin-bottom: 5rem;
+}
+@media (max-width: 1000px) {
+  .advantages {
+    flex-direction: column;
+  }
+}
+@media (max-width: 900px) {
+  .advantages {
+    flex-direction: row;
+  }
+}
+@media (max-width: 767px) {
+  .advantages {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.advantages__item {
+  flex: 1;
+}
+.advantages__img {
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 2.4rem;
+  width: 37rem;
+  height: 22rem;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .advantages__img {
+    margin: 0 auto 2rem;
+  }
+}
+.advantages__title {
+  margin-bottom: 1.4rem;
+  font-size: 3rem;
+  line-height: 1.2rem;
+  color: #1F1E17;
+  font-weight: 800;
+}
+.advantages__text {
+  font-weight: 500;
+}
+.advantages__label {
+  font-weight: 700;
+  line-height: 2.2;
+  color: #1F1E17;
+  max-width: 28rem;
+  display: block;
+}
+@media (max-width: 1000px) {
+  .advantages__label {
+    max-width: 100%;
+  }
+}
+
+.agro-prod__content {
+  display: none; /* По умолчанию скрываем все контенты */
+}
+
+.agro-prod__content.active {
+  display: block; /* Показываем активный контент */
+}
+
+.sidebar__link.active {
+  color: #968526;
+  font-weight: 900;
+}
+
+.accordion__item {
+  margin-bottom: 1rem;
+}
+.accordion__content {
+  display: none; /* Скрываем содержимое по умолчанию */
+}
+.accordion__header {
+  cursor: pointer; /* Указываем, что заголовок можно кликать */
+  padding: 2.5rem 3.8rem;
+  background-color: #f8f7f0;
+  border-radius: 1rem;
+  display: block;
+  position: relative;
+  color: #1F1E17;
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.accordion__header::after {
+  content: "";
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  width: 3rem;
+  height: 3rem;
+  border: solid #fad70e;
+  border-width: 0 0.4rem 0.4rem 0;
+  transform: translateY(-50%) rotate(45deg);
+  transition: transform 0.5s ease;
+  background-color: #c5ce38;
+}
+.accordion__header.active::after {
+  transform: translateY(-50%) rotate(-135deg);
+  border: solid #a9a37e;
+  border-width: 0 0.4rem 0.4rem 0;
+}
+.accordion__content.active {
+  display: block; /* Показываем содержимое, когда оно активно */
+  padding: 2.5rem 3.8rem;
 }/*# sourceMappingURL=style.css.map */

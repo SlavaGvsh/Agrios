@@ -17,6 +17,7 @@
       flex: 1;
       display: flex;
       justify-content: space-between;
+      padding-bottom: 1rem;
    }
 
    &__logo {
@@ -35,7 +36,7 @@
    .contact {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      // align-items: center;
 
       &__item {
          display: flex;

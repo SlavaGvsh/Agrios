@@ -5,11 +5,9 @@
    font-weight: 800;
    color: $color-black;
    text-align: center;
-  
 }
 .subtitle {
    @include font-covered;
-   
 }
 .text {
    font-size: 2rem;
@@ -17,4 +15,3 @@
    font-weight: 800;
    color: $color-black;
 }
-

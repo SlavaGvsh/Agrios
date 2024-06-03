@@ -1,9 +1,4 @@
-// $(document).ready(function() {
-//     $('.burger-menu, .burger-menu-close').click(function(event) {
-//        $('.nav,.burger-menu-close, .burger-menu').toggleClass('active');
-//        $('body').toggleClass('lock');
 
-//     });
 //  tabs
 $(".contact__item > a").click(function (e) {
   e.preventDefault();
@@ -135,3 +130,53 @@ $(document).ready(function () {
   });
 });
 
+// // agriculture-products
+
+$(document).ready(function() {
+  const $links = $('.sidebar__link');
+  const $contents = $('.agro-prod__content');
+
+  $links.on('click', function(event) {
+    event.preventDefault();
+
+    // Получаем целевой контент по data-target
+    const targetId = $(this).data('target');
+    const $targetContent = $('#' + targetId);
+
+    // Скрываем все контенты
+    $contents.removeClass('active');
+
+    // Удаляем класс active у всех ссылок
+    $links.removeClass('active');
+
+    // Показываем целевой контент и добавляем класс active на кликнутую ссылку
+    if ($targetContent.length) {
+      $targetContent.addClass('active');
+    }
+    $(this).addClass('active');
+  });
+
+  // Показать первый контент и выделить первую ссылку по умолчанию
+  if ($links.length > 0 && $contents.length > 0) {
+    $links.first().addClass('active');
+    $contents.first().addClass('active');
+  }
+  
+  // accordion
+
+  $('.accordion__header').on('click', function() {
+    // Проверяем, если заголовок уже активен
+    if ($(this).hasClass('active')) {
+      $(this).removeClass('active');
+      $(this).next('.accordion__content').removeClass('active');
+    } else {
+      // Закрываем все остальные активные заголовки и контенты
+      $('.accordion__header').removeClass('active');
+      $('.accordion__content').removeClass('active');
+      
+      // Открываем текущий заголовок и контент
+      $(this).addClass('active');
+      $(this).next('.accordion__content').addClass('active');
+    }
+  });
+});
