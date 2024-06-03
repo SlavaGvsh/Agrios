@@ -1663,7 +1663,7 @@ body.lock {
 }
 
 .breadcrumbs {
-  background-image: url("../../img/page-about/bg-breadcrumb.jpeg");
+  background-image: url("../img/page-about/bg-breadcrumb.jpeg");
   background-size: cover;
   background-position: center;
 }
