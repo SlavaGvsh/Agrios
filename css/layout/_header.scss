@@ -1,7 +1,11 @@
 .header {
-   background: url(../../img/Section.png) 50% 100% no-repeat;
+   background: url(../img/Section.png) 50% 100% repeat-x;
    position: relative;
    margin: -1.5rem 0;
+  
+   @include respond(phone) {
+      background: url(../img/Section.png) 50% 110% no-repeat;
+   }
    &__container {
       padding: 1rem 1.5rem;
       display: flex;
@@ -10,6 +14,9 @@
       gap: 22.1rem;
       @include respond(tab-land) {
          gap: 4rem;
+      }
+      @include respond(tab-port) {
+         padding: 1rem 1.5rem 3rem;
       }
    }
 
@@ -32,7 +39,7 @@
       align-items: center;
       gap: 1.5rem;
    }
-  
+
    .contact {
       display: flex;
       justify-content: space-between;

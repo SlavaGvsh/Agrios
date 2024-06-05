@@ -1,3 +1,18 @@
+// function loadHTML(id, url) {
+//   var xhr = new XMLHttpRequest();
+//   xhr.onreadystatechange = function() {
+//       if (this.readyState == 4 && this.status == 200) {
+//           document.getElementById(id).innerHTML = this.responseText;
+//       }
+//   };
+//   xhr.open("GET", url, true);
+//   xhr.send();
+// }
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   loadHTML("header", "header.html");
+//   loadHTML("footer", "footer.html");
+// });
 
 //  tabs
 $(".contact__item > a").click(function (e) {
