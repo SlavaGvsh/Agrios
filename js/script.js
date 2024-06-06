@@ -195,3 +195,45 @@ $(document).ready(function() {
     }
   });
 });
+
+//pagination
+
+$(document).ready(function() {
+  var itemsPerPage = 3; // Количество элементов на одну страницу
+  var $items = $('.blog__item'); // Выбор всех элементов блога
+  var totalPages = Math.ceil($items.length / itemsPerPage); // Общее количество страниц
+
+  // Функция для отображения определенной страницы
+  function showPage(page) {
+    $items.hide(); // Скрываем все элементы
+    $items.slice((page - 1) * itemsPerPage, page * itemsPerPage).show(); // Показываем элементы текущей страницы
+
+    // Обновляем активный класс на кнопках пагинации
+    $('.pagination__link').removeClass('active');
+    $('.pagination__link').each(function() {
+      if ($(this).text() == page) {
+        $(this).addClass('active');
+      }
+    });
+  }
+
+  // Инициализация первой страницы
+  showPage(1);
+
+  // Обработка кликов по кнопкам пагинации
+  $('.pagination__link').click(function(e) {
+    e.preventDefault(); // Отменяем стандартное действие ссылки
+    var page = $(this).text(); // Получаем номер страницы из текста ссылки
+    var currentPage = parseInt($('.pagination__link.active').text()); // Текущая активная страница
+
+    if (page === '«') {
+      page = Math.max(1, currentPage - 1); // Переход на предыдущую страницу
+    } else if (page === '»') {
+      page = Math.min(totalPages, currentPage + 1); // Переход на следующую страницу
+    } else {
+      page = parseInt(page); // Преобразуем текст в число
+    }
+
+    showPage(page); // Отображаем выбранную страницу
+  });
+});

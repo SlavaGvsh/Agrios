@@ -1151,7 +1151,7 @@ body.lock {
   background-size: cover;
   background-position: center;
   border-radius: 1rem;
-  height: 60rem;
+  height: 45rem;
   position: relative;
 }
 @media (max-width: 900px) {
@@ -2657,4 +2657,32 @@ body.lock {
 }
 .tabs__link:hover {
   opacity: 0.5;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+}
+.pagination__list {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  justify-content: flex-start;
+}
+.pagination__link {
+  line-height: 1.9;
+  color: #878680;
+  padding: 1rem 1.6rem;
+  border: 0.1rem solid #E4E2D7;
+  border-radius: 1rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+.pagination__link:hover {
+  background-color: #4BAF47;
+  color: #fff;
+  opacity: 0.5;
+}
+.pagination__link.active {
+  background-color: #4BAF47;
+  color: #fff;
 }/*# sourceMappingURL=style.css.map */

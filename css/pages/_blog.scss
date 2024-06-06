@@ -7,7 +7,7 @@
       // height: 100vh;
       padding: 12rem 1.5rem;
       @media (max-width: 1120px) {
-         grid-template-columns:  3fr minmax(320px, 1fr);
+         grid-template-columns: 3fr minmax(320px, 1fr);
          gap: 2rem;
       }
       @include respond(tab-port) {
@@ -15,10 +15,10 @@
          grid-template-areas:
             "sidebar"
             "body"; /* Сайдбар под основным контентом */
-            justify-items: center;
+         justify-items: center;
       }
    }
-  
+
    &__body {
       grid-area: body;
       .comments {
@@ -176,5 +176,37 @@
       &:hover {
          opacity: 0.5;
       }
+   }
+}
+
+.pagination {
+   &-container {
+      display: flex;
+      justify-content: center;
+   }
+   &__list {
+      display: flex;
+      gap: 0.8rem;
+      align-items: center;
+      justify-content: flex-start;
+   }
+   &__link {
+      line-height: 1.9;
+      color: $color-gray;
+      padding: 1rem 1.6rem;
+      border: 0.1rem solid $color-gray-1;
+      border-radius: 1rem;
+      transition:
+         background-color 0.3s,
+         color 0.3s;
+      &:hover {
+         background-color: $color-green;
+         color: #fff;
+         opacity: 0.5;
+      }
+      &.active {
+         background-color: $color-green;
+         color: #fff;
+     }
    }
 }
