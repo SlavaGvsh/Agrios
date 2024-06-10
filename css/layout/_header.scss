@@ -1,6 +1,11 @@
 .header {
-   background: url(../../img/Section.png) center/cover no-repeat;
+   background: url(../img/Section.png) 50% 100% repeat-x;
    position: relative;
+   margin: -1.5rem 0;
+  
+   @include respond(phone) {
+      background: url(../img/Section.png) 50% 110% no-repeat;
+   }
    &__container {
       padding: 1rem 1.5rem;
       display: flex;
@@ -10,12 +15,16 @@
       @include respond(tab-land) {
          gap: 4rem;
       }
+      @include respond(tab-port) {
+         padding: 1rem 1.5rem 3rem;
+      }
    }
 
    &__nav {
       flex: 1;
       display: flex;
       justify-content: space-between;
+      padding-bottom: 1rem;
    }
 
    &__logo {
@@ -30,38 +39,11 @@
       align-items: center;
       gap: 1.5rem;
    }
-   .social {
-      @include respond(tab-port) {
-         display: none;
-      }
-      &__list {
-         display: flex;
-         justify-content: space-between;
-         align-items: center;
-         gap: 1rem;
-      }
-      &__link {
-         width: 4rem;
-         display: block;
-         text-align: center;
-         width: 4rem;
-         border-radius: 50%;
-         background: $color-bg-social;
-         overflow: hidden;
-         border: 0.1rem solid $color-gray;
-         i {
-            font-size: 1.5rem;
-            color: $color-black;
-         }
-         &:hover {
-            opacity: 0.5;
-         }
-      }
-   }
+
    .contact {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+      // align-items: center;
 
       &__item {
          display: flex;
@@ -75,6 +57,7 @@
          }
          i {
             font-size: 4rem;
+            color: $color-green;
             @include respond(tab-land) {
                font-size: 3rem;
             }
@@ -132,6 +115,34 @@
       font-size: 2rem;
       @include respond(tab-port) {
          padding: 1rem;
+      }
+   }
+}
+.social {
+   @include respond(tab-port) {
+      display: none;
+   }
+   &__list {
+      display: flex;
+      // justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+   }
+   &__link {
+      width: 4rem;
+      display: block;
+      text-align: center;
+      width: 4rem;
+      border-radius: 50%;
+      background: $color-bg-social;
+      overflow: hidden;
+      border: 0.1rem solid $color-gray;
+      i {
+         font-size: 1.5rem;
+         color: $color-black;
+      }
+      &:hover {
+         opacity: 0.5;
       }
    }
 }
