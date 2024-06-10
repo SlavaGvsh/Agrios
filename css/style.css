@@ -867,6 +867,7 @@ body.lock {
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 1.8rem;
+  display: block;
 }
 .promo__title {
   font-family: "Covered By Your Grace", cursive;
@@ -876,6 +877,7 @@ body.lock {
   color: #ffffff;
   margin-bottom: 2.6rem;
   position: relative;
+  display: block;
 }
 @media (max-width: 900px) {
   .promo__title {
